@@ -1,0 +1,191 @@
+:root{
+  --backColor--:hsl(207, 26%, 17%);
+  --textColor--:hsl(200, 15%, 8%);
+  --elementsBackColor--:hsl(0, 0%, 100%);
+  --inputTextColor--:hsl(0, 0%, 52%);
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+.header{
+  padding: 15px 5px;
+  background-color: var(--elementsBackColor--);
+  color:var(--textColor--)
+
+}
+.header .brand {
+  font-size: 20px;
+  font-weight: 700 !important;
+}
+.header .mode{
+  cursor: pointer;
+  font-weight: 600;
+}
+.fa-sun-o{
+  color: gold;
+  text-shadow: 0 0 5px gold;
+}
+.btn-back{
+  padding: 3px 30px !important;
+
+}
+
+.country-detail{
+  padding: 20px  20px 20px 50px!important ;
+  color:var(--textColor--)
+}
+.country-detail .col-md-6:last-child{
+  padding-left: 20px;
+}
+.country-detail .col-md-6>div{
+  margin-bottom: 10px;
+}
+
+.country-detail .border-country,.btn-back
+{
+  box-shadow: 0px 0px 5px hsl(209, 23%, 22%);
+
+}
+.country-detail .border-country{
+ 
+  padding: 2px 8px;
+  margin-left: 10px;
+  border-radius: 5px;
+
+}
+#error-message{
+  font-size:30px !important;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+
+}
+.overlay-loading{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+}
+.overlay-loading .buble-container{
+  width: 300px;
+  height: 300px;
+  transition: animation ease-in-out;
+  /* animation: rotate 1.5s linear infinite; */
+  position: relative;
+  
+}
+@keyframes rotate {
+0%{
+  transform: rotateZ(0deg);
+}
+100%{
+  transform: rotateZ(360deg);
+}
+  
+}
+.overlay-loading .buble-container .buble{
+  width: 50px;
+  height: 50px;
+
+  border-radius: 50%;
+  display: inline-block;
+  position: absolute;
+  transition: animation ease-in-out;
+  animation: 2.5s linear infinite ;
+}
+.overlay-loading .buble-container .buble:nth-child(1){
+  top: 0;
+  left: 50%;
+  margin-left: -25px;
+  animation-name: buble-1;
+  background-color: Red;
+}
+@keyframes buble-1 {
+  0%{
+      top:0
+  }
+  50%{
+      top: calc(100% - 50px);
+
+  }
+  100%{
+      top: 0;
+  }
+  
+}
+.overlay-loading .buble-container .buble:nth-child(2){
+  top:calc(100% - 50px);
+  left: 50%;
+  margin-left: -25px;
+  background-color: olive;
+  animation-name: buble-2;
+}
+@keyframes buble-2 {
+  0%{ top: calc(100% - 50px);}
+  50%{  top:0;}
+  100%{ top: calc(100% - 50px)}
+  
+}
+.overlay-loading .buble-container .buble:nth-child(3){
+  top: 50%;
+  left: 0;
+  margin-top: -25px;
+  background-color: lightgreen;
+  animation-name: buble-3;
+
+}
+@keyframes buble-3 {
+  0%{
+      left:0
+  }
+  50%{
+      left: calc(100% - 50px);
+
+  }
+  100%{
+      left: 0;
+  }
+  
+}
+.overlay-loading .buble-container .buble:nth-child(4){
+  top: 50%;
+  left: calc(100% - 50px);
+  margin-top: -25px;
+  background-color: blue;
+  animation-name: buble-4;
+
+}
+@keyframes buble-4 {
+  0%{
+      left:calc(100% - 50px)
+  }
+  50%{
+      left: 0;
+
+  }
+  100%{
+      left: calc(100% - 50px);
+  }
+  
+}
+
+#mapId{ height: 500px; }
+.my-text-16px{ font-size: 16px; }
